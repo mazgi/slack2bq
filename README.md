@@ -20,3 +20,13 @@ $ bundle
 $ . ./secret.sh
 $ bundle exec fluentd --config etc/fluentd/slack-logs.conf --use-v1-config -vv
 ```
+
+### Example
+
+1. Post a message on slack
+
+![](images/README/on_slack.png)
+
+2. Query on BQ
+
+![](images/README/on_bq.png)
