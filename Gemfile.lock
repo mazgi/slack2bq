@@ -1,5 +1,7 @@
-PATH
-  remote: ../fluent-plugin-slackrtm
+GIT
+  remote: https://github.com/mazgi/fluent-plugin-slackrtm.git
+  revision: 8c49a13e4e529e8ec0f951974317307ba398fe06
+  branch: support-label
   specs:
     fluent-plugin-slackrtm (0.2.4)
       fluent-mixin-config-placeholders (>= 0.3.0)
@@ -9,10 +11,34 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (5.1.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (~> 0.7)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    addressable (2.5.1)
+      public_suffix (~> 2.0, >= 2.0.2)
+    concurrent-ruby (1.0.5)
     cool.io (1.5.0)
+    faraday (0.12.1)
+      multipart-post (>= 1.2, < 3)
     fluent-mixin-config-placeholders (0.4.0)
       fluentd
       uuidtools (>= 2.1.5)
+    fluent-mixin-plaintextformatter (0.2.6)
+      fluentd
+      ltsv
+    fluent-plugin-bigquery (0.4.4)
+      activesupport (>= 3.2, < 6)
+      fluent-mixin-config-placeholders (>= 0.3.0)
+      fluent-mixin-plaintextformatter (>= 0.2.1)
+      fluent-plugin-buffer-lightening (>= 0.0.2)
+      fluentd (~> 0.12.0)
+      google-api-client (~> 0.9.3)
+      googleauth (>= 0.5.0)
+      multi_json
+    fluent-plugin-buffer-lightening (0.0.2)
+      fluentd (>= 0.10.42)
     fluentd (0.12.36)
       cool.io (>= 1.2.2, < 2.0.0)
       http_parser.rb (>= 0.5.1, < 0.7.0)
@@ -23,10 +49,53 @@ GEM
       tzinfo (>= 1.0.0)
       tzinfo-data (>= 1.0.0)
       yajl-ruby (~> 1.0)
+    google-api-client (0.9.28)
+      addressable (~> 2.3)
+      googleauth (~> 0.5)
+      httpclient (~> 2.7)
+      hurley (~> 0.1)
+      memoist (~> 0.11)
+      mime-types (>= 1.6)
+      representable (~> 2.3.0)
+      retriable (~> 2.0)
+    googleauth (0.5.1)
+      faraday (~> 0.9)
+      jwt (~> 1.4)
+      logging (~> 2.0)
+      memoist (~> 0.12)
+      multi_json (~> 1.11)
+      os (~> 0.9)
+      signet (~> 0.7)
     http_parser.rb (0.6.0)
+    httpclient (2.8.3)
+    hurley (0.2)
+    i18n (0.8.4)
     json (2.1.0)
+    jwt (1.5.6)
+    little-plugger (1.1.4)
+    logging (2.2.2)
+      little-plugger (~> 1.1)
+      multi_json (~> 1.10)
+    ltsv (0.1.0)
+    memoist (0.15.0)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
+    minitest (5.10.2)
     msgpack (1.1.0)
+    multi_json (1.12.1)
+    multipart-post (2.0.0)
+    os (0.9.6)
+    public_suffix (2.0.5)
+    representable (2.3.0)
+      uber (~> 0.0.7)
+    retriable (2.1.0)
     sigdump (0.2.4)
+    signet (0.7.3)
+      addressable (~> 2.3)
+      faraday (~> 0.9)
+      jwt (~> 1.5)
+      multi_json (~> 1.10)
     slack-rtmapi (1.0.0.rc4)
       websocket-driver
     string-scrub (0.0.5)
@@ -35,6 +104,7 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2017.2)
       tzinfo (>= 1.0.0)
+    uber (0.0.15)
     uuidtools (2.1.5)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
@@ -45,6 +115,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  fluent-plugin-bigquery
   fluent-plugin-slackrtm!
   fluentd (~> 0.12.0)
 

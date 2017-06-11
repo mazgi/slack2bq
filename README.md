@@ -6,6 +6,13 @@
 $ echo "export SLACK_TOKEN='YOUR_SLACK_TOKEN'" > secret.sh
 ```
 
+```shellsession
+$ bq mk gcp-mazgi-sandbox:slack_mazgi
+$ bq mk --table gcp-mazgi-sandbox:slack_mazgi.slack_message schema/slack_message.json
+```
+
+[Create a GCP serice account](https://console.cloud.google.com/iam-admin/serviceaccounts/project) and store json key into `secret/` directory.
+
 ## Execute
 
 ```shellsession
