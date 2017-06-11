@@ -1,3 +1,11 @@
+PATH
+  remote: ../fluent-plugin-slackrtm
+  specs:
+    fluent-plugin-slackrtm (0.2.4)
+      fluent-mixin-config-placeholders (>= 0.3.0)
+      fluentd (>= 0.10.58, < 2)
+      slack-rtmapi (= 1.0.0.rc4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -5,28 +13,23 @@ GEM
     fluent-mixin-config-placeholders (0.4.0)
       fluentd
       uuidtools (>= 2.1.5)
-    fluent-plugin-slackrtm (0.2.4)
-      fluent-mixin-config-placeholders (>= 0.3.0)
-      fluentd (>= 0.10.49, < 2)
-      slack-rtmapi (= 1.0.0.rc4)
-    fluentd (0.14.17)
-      cool.io (>= 1.4.5, < 2.0.0)
+    fluentd (0.12.36)
+      cool.io (>= 1.2.2, < 2.0.0)
       http_parser.rb (>= 0.5.1, < 0.7.0)
-      msgpack (>= 0.7.0, < 2.0.0)
-      serverengine (>= 2.0.4, < 3.0.0)
+      json (>= 1.4.3)
+      msgpack (>= 0.5.11, < 2)
       sigdump (~> 0.2.2)
-      strptime (~> 0.1.7)
-      tzinfo (~> 1.0)
-      tzinfo-data (~> 1.0)
+      string-scrub (>= 0.0.3, <= 0.0.5)
+      tzinfo (>= 1.0.0)
+      tzinfo-data (>= 1.0.0)
       yajl-ruby (~> 1.0)
     http_parser.rb (0.6.0)
+    json (2.1.0)
     msgpack (1.1.0)
-    serverengine (2.0.5)
-      sigdump (~> 0.2.2)
     sigdump (0.2.4)
     slack-rtmapi (1.0.0.rc4)
       websocket-driver
-    strptime (0.1.9)
+    string-scrub (0.0.5)
     thread_safe (0.3.6)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
@@ -42,7 +45,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  fluent-plugin-slackrtm
+  fluent-plugin-slackrtm!
+  fluentd (~> 0.12.0)
 
 BUNDLED WITH
    1.14.6
