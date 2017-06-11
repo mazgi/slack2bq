@@ -1,0 +1,34 @@
+[
+  {
+    "name": "type",
+    "type": "STRING"
+  },
+  {
+    "name": "subtype",
+    "type": "STRING"
+  },
+  {
+    "name": "channel",
+    "type": "STRING"
+  },
+  {
+    "name": "user",
+    "type": "STRING"
+  },
+  {
+    "name": "text",
+    "type": "STRING"
+  },
+  {
+    "name": "ts",
+    "type": "TIMESTAMP"
+  },
+  {
+    "name": "source_team",
+    "type": "STRING"
+  },
+  {
+    "name": "team",
+    "type": "STRING"
+  }
+]
